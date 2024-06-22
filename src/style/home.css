@@ -87,7 +87,7 @@ main > h1 {
     }
     
     .icon-container {
-        width: 90%; /* Ajustando a largura do container de ícones para 90% */
+        width: 100%; /* Ajustando a largura do container de ícones para 90% */
     }
     
     .icon-row:nth-child(1) {
@@ -95,12 +95,12 @@ main > h1 {
     }
 
     main > h1 {
-        margin: 3rem;
+        margin: 4rem;
         line-height: 4rem;
         font-size: 5rem; /* Reduzindo ainda mais o tamanho do título */
     }
 }
-
+   
 
 /* Media query for extra small screens */
 @media (max-width: 480px) {
