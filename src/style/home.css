@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+main > h1 {
+    color: #D2D5DD;
+    font-size: 6rem;
+    text-align: center;
+    font-family: "Baloo Tammudu 2", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.icon-container {
+    width: 80%;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+.icon-button {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    flex: 1 1 calc(33.333% -8rem); /* flex-grow, flex-shrink, flex-basis */
+    max-width: calc(33.333% - 8rem); /* maximum width based on three icons per row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1; /* Ensures square aspect ratio */
+}
+
+.icon-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Adjust as needed to maintain aspect ratio of SVGs */
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+    .icon-button {
+        flex: 1 1 calc(30% - 1rem); /* Definindo 50% da largura para cada ícone */
+        max-width: calc(30% - 1rem); /* Definindo a largura máxima para cada ícone */
+        margin: 0.5rem; /* Adicionando margem para separar os ícones */
+    }
+}    
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .icon-row {
+        flex-wrap: wrap; /* Permite que os ícones quebrem para a próxima linha */
+        justify-content: center;
+        gap: 1rem; /* Reduzindo o espaçamento entre os ícones */
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    
+    .icon-button {
+        flex: 1 1 calc(30% - 1rem); /* Definindo 50% da largura para cada ícone */
+        max-width: calc(30% - 1rem); /* Definindo a largura máxima para cada ícone */
+        margin: 0.5rem; /* Adicionando margem para separar os ícones */
+    }
+    
+    .icon-container {
+        width: 90%; /* Ajustando a largura do container de ícones para 90% */
+    }
+    
+    .icon-row:nth-child(1) {
+        margin-bottom: 1rem; /* Espaço entre a primeira e a segunda linha de ícones */
+    }
+
+    main > h1 {
+        margin: 3rem;
+        line-height: 4rem;
+        font-size: 5rem; /* Reduzindo ainda mais o tamanho do título */
+    }
+}
+
+
+/* Media query for extra small screens */
+@media (max-width: 480px) {
+    .icon-row {
+        gap: 0.5rem; /* Ajustando o espaçamento entre os ícones */
+    }
+}
+
